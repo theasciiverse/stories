@@ -16,6 +16,6 @@ done
 mkdir -p "$saves" && cd "$saves" || exit 1
 case "$f" in
   *.ulx|*.gblorb) exec "$dir/lib/glulxe" "$@" "$f" ;;
-  *.t3|*.gam)     exec "$dir/lib/frob" "$@" "$f" ;;
+  *.t3|*.gam)     exec "$dir/lib/frob" -d "$@" "$f" ;;  # -d: saves here, not by the story
   *)              exec "$dir/lib/frotz" "$@" "$f" ;;
 esac

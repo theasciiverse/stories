@@ -24,6 +24,12 @@ sha256) and, where the licence asks for it, the source.
 | Risorgimento Represso | Michael J. Coyne | 2003 | CC BY-NC-ND 1.0 |
 | Hoosegow | Ben Collins-Sussman and Jack Welch | 2010 | CC BY-NC-SA 3.0 |
 | Blue Chairs | Chris Klimas | 2004 | CC BY-NC-SA 3.0 |
+| Counterfeit Monkey | Emily Short | 2012 | CC BY-SA 4.0 |
+| Kerkerkruip | Victor Gijsbers and contributors | 2011 | GPL-3.0-or-later |
+| Rover's Day Out | Jack Welch and Ben Collins-Sussman | 2009 | CC BY-NC-SA 3.0 |
+| Andromeda Apocalypse | Marco Innocenti | 2012 | CC BY-NC-SA 3.0 |
+| The Life (and Deaths) of Doctor M | Michael D. Hilborn | 2011 | CC BY-NC-ND 3.0 |
+| I Am Prey | Joey Cramsey | 2023 | CC BY-SA 4.0 |
 
 Several licences allow only non-commercial distribution. Asciiverse gives
 these away free; nothing here is sold.
@@ -33,9 +39,19 @@ these away free; nothing here is sold.
 - Frotz 2.55 (GPL-2.0-or-later) for Z-machine stories, built by
   `asciiverse/build-frotz.sh` from upstream's tag plus one fix
   (`asciiverse/frotz-blorb-name.patch`, also in theasciiverse/frotz).
+- Glulxe 0.6.1 with GlkTerm (both MIT) for Glulx stories, built by
+  `asciiverse/build-glulxe.sh` (the same build as theasciiverse/glulxe).
+- FrobTADS 2.0 (TADS Freeware Source Code Licenses: free to copy and give
+  away, never sold or bundled with anything sold) for TADS stories, built by
+  `asciiverse/build-frobtads.sh` (the same build as theasciiverse/frobtads),
+  started with `-d` so saves stay in ~/.local/share/<story>.
+
+Kerkerkruip's GPL source is kept in `sources/`.
 
 ## Building
 
-    docker run --rm -v "$PWD":/src -w /src alpine:3.22 sh asciiverse/build-frotz.sh
+    for b in asciiverse/build-*.sh; do
+      docker run --rm -v "$PWD":/src -w /src alpine:3.22 sh "$b"
+    done
     sh asciiverse/stage.sh lost-pig     # stage/lost-pig is the av archive
     stage/lost-pig/lost-pig             # play it

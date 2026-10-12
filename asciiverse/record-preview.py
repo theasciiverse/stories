@@ -21,6 +21,12 @@ STORIES = {
     "risorgimento-represso": ([], ["examine notebook", "examine professor", "stand up", "sit down", "examine students", "look"]),
     "hoosegow": ([" ", " "], ["examine bars", "inventory", "talk to muddy", "examine stool", "examine window", "read paper"]),
     "blue-chairs": ([], ["yes", "examine chairs", "look", "examine bulb", "inventory", "down"]),
+    # Glulx: GlkTerm pages long openings, and the first key only turns the page
+    "counterfeit-monkey": ([], ["yes", "no", "Andra", "look", "x r-remover", "north", "east"]),
+    "kerkerkruip": (["n", " ", " ", " "], ["take blindfold", "inventory", "examine buckler", "look", "north"]),
+    "rovers-day-out": ([" ", " "], ["look", "inventory", "wake up", "look", "examine arm", "inventory"]),
+    "andromeda-apocalypse": ([" "], ["look", "examine uncle oren", "talk to oren", "examine ocean", "inventory", "south"]),
+    "doctor-m": ([" "], ["examine signpost", "read signpost", "inventory", "north", "look"]),
 }
 root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 story = sys.argv[1]

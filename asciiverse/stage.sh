@@ -12,7 +12,7 @@ cp asciiverse/play "$out/$story"
 chmod 755 "$out/$story"
 cp -R "$story"/. "$out/"
 case "$(ls "$story")" in
-  *.ulx*|*.gblorb*) cp build/glulxe "$out/lib/glulxe"; cp build/LICENSE.glulxe "$out/lib/" ;;
-  *.t3*|*.gam*)     cp build/frob "$out/lib/frob"; cp build/COPYING.frobtads "$out/lib/" ;;
+  *.ulx*|*.gblorb*) cp build/glulxe "$out/lib/glulxe"; cp build/LICENSE.glulxe build/LICENSE-glkterm "$out/lib/" ;;
+  *.t3*|*.gam*)     cp build/frob "$out/lib/frob"; cp build/COPYING.frobtads build/LICENSE.TADS2 build/LICENSE.TADS3 build/NOTICE.frobtads "$out/lib/" ;;
   *)                cp build/frotz "$out/lib/frotz"; cp build/COPYING "$out/lib/COPYING.frotz" ;;
 esac

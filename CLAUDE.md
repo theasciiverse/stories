@@ -19,4 +19,7 @@ theasciiverse/zork.
 - No sex content in the catalog (asciiverse/CLAUDE.md); check new stories.
 - Release: tag `v1-av.<n>` and push it.
 - Previews: build the interpreters, `sh asciiverse/stage.sh <story>`, then
-  `python3 asciiverse/record-preview.py <story>` (moves listed in it).
+  `python3 asciiverse/record-preview.py <story>` (moves listed in it); I Am
+  Prey pages with [More], so it has its own, asciiverse/record-preview-tads.py.
+- Held back, not in the repo: Blue Lacuna (its opening asks "make art, or
+  make love?" in bed; the no-sex rule, David to decide).
