@@ -1,0 +1,8 @@
+#!/bin/sh
+# Stands in for ncurses6-config on macOS so Frotz links the system ncurses
+# (/usr/lib/libncurses), which has the wide-character functions, instead of
+# Homebrew's. See asciiverse/build.sh.
+case "${1:-}" in
+  --libs) echo "-lncurses" ;;
+  --cflags) echo "-D_XOPEN_SOURCE_EXTENDED" ;;
+esac
