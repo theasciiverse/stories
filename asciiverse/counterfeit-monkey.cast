@@ -1,4 +1,4 @@
-{"version":3,"term":{"cols":100,"rows":30,"type":"xterm-256color"},"timestamp":1791841854,"idle_time_limit":2.0,"command":"asciiverse/adventures/stories/stage/counterfeit-monkey/counterfeit-monkey","env":{"LANG":"C.UTF-8","TERM":"xterm-256color","COLORTERM":"truecolor"}}
+{"version":3,"term":{"cols":100,"rows":30,"type":"xterm-256color"},"timestamp":1791841854,"idle_time_limit":2.0,"env":{"LANG":"C.UTF-8","TERM":"xterm-256color","COLORTERM":"truecolor"}}
 [0.012, "o", "\u001b[?1049h\u001b[22;0;0t\u001b[1;30r\u001b(B\u001b[m\u001b[4l\u001b[?7h\u001b[?1h\u001b="]
 [0.133, "o", "\u001b[H\u001b[2J Back Alley, noon\u001b[1;80HGoals: 1  Score: 0\r\u001b[2d"]
 [0.000, "o", "\u001b(0\u001b[0mqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq\u001b(B\u001b[7;1H\u001b(0\u001b[0m"]

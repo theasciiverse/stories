@@ -1,4 +1,4 @@
-{"version":3,"term":{"cols":100,"rows":30,"type":"xterm-256color"},"timestamp":1791840230,"idle_time_limit":2.0,"command":"asciiverse/adventures/stories/stage/risorgimento-represso/risorgimento-represso","env":{"TERM":"xterm-256color","COLORTERM":"truecolor","LANG":"C.UTF-8"}}
+{"version":3,"term":{"cols":100,"rows":30,"type":"xterm-256color"},"timestamp":1791840230,"idle_time_limit":2.0,"env":{"TERM":"xterm-256color","COLORTERM":"truecolor","LANG":"C.UTF-8"}}
 [0.013, "o", "\u001b[?1049h\u001b[22;0;0t\u001b[1;30r\u001b(B\u001b[m\u001b[4l\u001b[?7h\u001b[?1h\u001b="]
 [0.000, "o", "\u001b[H\u001b[2J\u001b[4dYou've heard about them from others. You've even had them yourself: classes that seem to last\r\u001b[5d"]
 [0.000, "o", "forever. But this one takes the biscuit. You wonder what possessed you to sign up for \u001b(B\u001b[0m\u001b[3mCeltic\r\u001b[6d"]
