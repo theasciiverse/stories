@@ -15,7 +15,7 @@ name: release
 
 on:
   push:
-    tags: ["v*"]
+    tags: ["v*-av.*"]
   workflow_dispatch:
     inputs:
       tag:
@@ -74,6 +74,9 @@ jobs:
     runs-on: macos-15
     env:
       MACOSX_DEPLOYMENT_TARGET: "11.0"
+      # CMake 4, on GitHub's macOS runners, refuses FrobTADS' old
+      # cmake_minimum_required; this lets it build with today's policies
+      CMAKE_POLICY_VERSION_MINIMUM: "3.5"
     steps:
       - uses: actions/checkout@v4
         with:
