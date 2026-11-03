@@ -15,7 +15,13 @@ theasciiverse/zork.
   story folder's files. Saves go to ~/.local/share/<story>.
 - Interpreters: asciiverse/build-*.sh, each self-contained and pinned.
   Frotz carries asciiverse/frotz-blorb-name.patch (a heap overread that
-  crashed the static build under long install paths).
+  crashed the static build under long install paths). ScottFree 1.14
+  (Scott Adams .dat stories, 2026-11-03) is Sam Trenholme's 2007 copy in
+  asciiverse/scottfree, unchanged, plus asciiverse/scottfree-fixes.patch
+  (headers, a printf format, a restore that wrote past a short).
+- ScottFree restores only from its command line, so asciiverse/play lists
+  the saved games of a .dat story and asks which to restore (Enter: new).
+  Its previews end with QUIT GAME (QUIT alone only explains that).
 - No sex content in the catalog (asciiverse/CLAUDE.md); check new stories.
 - Release: tag `v1-av.<n>` and push it.
 - Previews: build the interpreters, `sh asciiverse/stage.sh <story>`, then

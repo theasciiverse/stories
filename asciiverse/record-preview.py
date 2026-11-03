@@ -27,6 +27,8 @@ STORIES = {
     "rovers-day-out": ([" ", " "], ["look", "inventory", "wake up", "look", "examine arm", "inventory"]),
     "andromeda-apocalypse": ([" "], ["look", "examine uncle oren", "talk to oren", "examine ocean", "inventory", "south"]),
     "doctor-m": ([" "], ["examine signpost", "read signpost", "inventory", "north", "look"]),
+    # Scott Adams format (ScottFree): two-word commands, the room drawn above
+    "desert-adventure": ([], ["look", "go north", "get flower", "enter pool", "get tube", "inventory", "go up"]),
 }
 root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 story = sys.argv[1]
@@ -59,10 +61,25 @@ for k in keys:
     os.write(fd, k.encode()); pump(2.5)
 for move in moves:
     type_line(move)
-type_line("quit", 1.0)
-type_line("y", 1.0)
+if any(n.endswith(".dat") for n in os.listdir(f"{root}/{story}")):
+    type_line("quit game", 1.5)            # ScottFree: QUIT alone only explains this
+else:
+    type_line("quit", 1.0)
+    type_line("y", 1.0)
 os.write(fd, b" "); pump(0.5)              # Frotz: "[Hit any key to exit.]"
 for _ in range(50):
     if os.waitpid(pid, os.WNOHANG)[0]: break
     time.sleep(0.2)
 shutil.rmtree(home, ignore_errors=True)
+
+# asciinema writes the command it ran into the cast's header, with a path
+# on the recording machine; players never use it, so it is taken out
+cast = f"{root}/asciiverse/{story}.cast"
+with open(cast) as f:
+    lines = f.read().split("\n")
+import json
+head = json.loads(lines[0])
+head.pop("command", None)
+lines[0] = json.dumps(head, separators=(",", ":"))
+with open(cast, "w") as f:
+    f.write("\n".join(lines))

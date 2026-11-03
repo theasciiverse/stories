@@ -14,5 +14,6 @@ cp -R "$story"/. "$out/"
 case "$(ls "$story")" in
   *.ulx*|*.gblorb*) cp build/glulxe "$out/lib/glulxe"; cp build/LICENSE.glulxe build/LICENSE-glkterm "$out/lib/" ;;
   *.t3*|*.gam*)     cp build/frob "$out/lib/frob"; cp build/COPYING.frobtads build/LICENSE.TADS2 build/LICENSE.TADS3 build/NOTICE.frobtads "$out/lib/" ;;
+  *.dat*)           cp build/scottfree "$out/lib/scottfree"; cp build/COPYING.scottfree "$out/lib/" ;;
   *)                cp build/frotz "$out/lib/frotz"; cp build/COPYING "$out/lib/COPYING.frotz" ;;
 esac

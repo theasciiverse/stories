@@ -1,0 +1,34 @@
+# ScottFree 1.14 (Sam Trenholme's 2007 copy): the headers today's compilers
+# want (time.h, unistd.h), and two real fixes: game text is no longer used
+# as a printf format (a "%" in a message), and restoring a saved game reads
+# DarkFlag, a short, with %hd instead of %d, which wrote past it. Applied by
+# build-scottfree.sh.
+--- a/asciiverse/scottfree/ScottCurses.c	2026-11-03 22:18:57.276643530 +0100
++++ b/asciiverse/scottfree/ScottCurses.c	2026-11-03 22:18:57.294752673 +0100
+@@ -22,6 +22,8 @@
+ #include <curses.h>
+ #include <stdarg.h>
+ #include <signal.h>
++#include <time.h>
++#include <unistd.h>
+ 
+ #include "Scott.h"
+ 
+@@ -408,7 +410,7 @@
+ 			wclrtoeol(Bottom);
+ 			OutputPos=0;
+ 		}
+-		wprintw(Bottom,word);
++		wprintw(Bottom,"%s",word);
+ 		OutputPos+=strlen(word);
+ 		
+ 		if(*buffer==0)
+@@ -703,7 +705,7 @@
+ 	{
+ 		fscanf(f,"%d %d\n",&Counters[ct],&RoomSaved[ct]);
+ 	}
+-	fscanf(f,"%ld %d %hd %d %d %hd\n",
++	fscanf(f,"%ld %hd %hd %d %d %hd\n",
+ 		&BitFlags,&DarkFlag,&MyLoc,&CurrentCounter,&SavedRoom,
+ 		&GameHeader.LightTime);
+ 	/* Backward compatibility */
