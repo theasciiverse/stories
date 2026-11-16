@@ -27,6 +27,13 @@ theasciiverse/zork.
 - Previews: build the interpreters, `sh asciiverse/stage.sh <story>`, then
   `python3 asciiverse/record-preview.py <story>` (moves listed in it); I Am
   Prey pages with [More], so it has its own, asciiverse/record-preview-tads.py.
+- Two real-time Z-machine games live here too, catalog kind `game`
+  (2026-11-16): ZRacer (`zracer-c40`, David Fisher's 2007 C-40 racer; not
+  lRem's ZRacer, which David pulled) and The Mad Bomber (`mad-bomber`).
+  They read single keys against the clock (Frotz's timed input, tested at
+  80x24 and 100x30), so their previews come from
+  asciiverse/record-preview-realtime.py. ZRacer: lowercase p pauses (P
+  does not), Esc opens the pause menu, q then y quits.
 - Counterfeit Monkey's mild sexual references are fine (David, 2026-10-17).
 - Tested in tmux at 80x24 (2026-10-17): all five Glulx stories and I Am
   Prey save to ~/.local/share/<story>, restore, reflow at 60x18 and quit

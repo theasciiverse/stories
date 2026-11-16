@@ -30,6 +30,8 @@ sha256) and, where the licence asks for it, the source.
 | Andromeda Apocalypse | Marco Innocenti | 2012 | CC BY-NC-SA 3.0 |
 | The Life (and Deaths) of Doctor M | Michael D. Hilborn | 2011 | CC BY-NC-ND 3.0 |
 | I Am Prey | Joey Cramsey | 2023 | CC BY-SA 4.0 |
+| ZRacer | David Fisher | 2007 | Free to distribute unmodified (author's terms) |
+| The Mad Bomber | Neil James Brown | 1997 | Public domain |
 
 Several licences allow only non-commercial distribution. Asciiverse gives
 these away free; nothing here is sold.
